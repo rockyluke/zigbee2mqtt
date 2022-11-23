@@ -23,6 +23,7 @@ import ExtensionBridge from './extension/bridge';
 import ExtensionGroups from './extension/groups';
 import ExtensionAvailability from './extension/availability';
 import ExtensionBind from './extension/bind';
+import ExtensionMatter from './extension/matter';
 import ExtensionReport from './extension/legacy/report';
 import ExtensionOnEvent from './extension/onEvent';
 import ExtensionOTAUpdate from './extension/otaUpdate';
@@ -32,7 +33,7 @@ import ExtensionExternalExtension from './extension/externalExtension';
 const AllExtensions = [
     ExtensionPublish, ExtensionReceive, ExtensionNetworkMap, ExtensionSoftReset, ExtensionHomeAssistant,
     ExtensionConfigure, ExtensionDeviceGroupMembership, ExtensionBridgeLegacy, ExtensionBridge, ExtensionGroups,
-    ExtensionBind, ExtensionReport, ExtensionOnEvent, ExtensionOTAUpdate,
+    ExtensionBind, ExtensionReport, ExtensionOnEvent, ExtensionOTAUpdate, ExtensionMatter,
     ExtensionExternalConverters, ExtensionFrontend, ExtensionExternalExtension, ExtensionAvailability,
 ];
 
@@ -77,6 +78,7 @@ export class Controller {
             new ExtensionOnEvent(...this.extensionArgs),
             new ExtensionOTAUpdate(...this.extensionArgs),
             new ExtensionReport(...this.extensionArgs),
+            new ExtensionMatter(...this.extensionArgs),
             new ExtensionExternalExtension(...this.extensionArgs),
             new ExtensionAvailability(...this.extensionArgs),
             settings.get().frontend && new ExtensionFrontend(...this.extensionArgs),

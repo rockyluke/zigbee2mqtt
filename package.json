@@ -50,6 +50,7 @@
     "mkdir-recursive": "^0.4.0",
     "moment": "^2.29.4",
     "mqtt": "4.3.7",
+    "node-matter": "^0.0.10",
     "object-assign-deep": "^0.4.0",
     "rimraf": "^3.0.2",
     "semver": "^7.3.8",
